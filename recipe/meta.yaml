@@ -1,4 +1,4 @@
-{% set version = '0.1.5' %}
+{% set version = "0.1.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dispersionIndicators_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dispersionIndicators/dispersionIndicators_{{ version }}.tar.gz
-  sha256: 200784b4e5c1baf7c1ebb3f8176b7b1c31c560442297d8b5da09643158dd58ef
+  sha256: 6b34dcfcf5d70ff836cbe6dfa06d702b5989cdcbe913566cdb5a9061dc104596
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -43,13 +43,8 @@ test:
 about:
   home: https://unh-pfem-gitlab.ara.inrae.fr/packages/dispersion_indicators/
   license: MIT
-  summary: Provides methods for analyzing the dispersion of tabular datasets with batched and
-    ordered samples. Based on convex hull or integrated covariance Mahalanobis, several
-    indicators are implemented for inter and intra batch dispersion analysis. It is
-    designed to facilitate robust statistical assessment of data variability, supporting
-    applications in exploratory data analysis and quality control, for such datasets
-    as the one found in metabololomics studies. For more details see Salanon (2024)
-    <doi:10.1016/j.chemolab.2024.105148> and Salanon (2025) <doi:10.1101/2025.08.01.668073>.
+  summary: Provides methods for analyzing the dispersion of tabular datasets with batched and ordered samples. Based on convex hull or integrated covariance Mahalanobis, several indicators are implemented for inter and intra batch dispersion analysis. It is designed to facilitate robust statistical assessment of data 
+    variability, supporting applications in exploratory data analysis and quality control, for such datasets as the one found in metabololomics studies. For more details see Salanon (2024) <doi:10.1016/j.chemolab.2024.105148> and Salanon (2025) <doi:10.1101/2025.08.01.668073>.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
