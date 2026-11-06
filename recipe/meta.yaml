@@ -1,4 +1,4 @@
-{% set version = "0.1.6" %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dispersionIndicators_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dispersionIndicators/dispersionIndicators_{{ version }}.tar.gz
-  sha256: 6b34dcfcf5d70ff836cbe6dfa06d702b5989cdcbe913566cdb5a9061dc104596
+  sha256: 6f926ebf56f0605520609c876107215f08a894e8405ab5577ae24db602fdb4dd
 
 build:
   number: 0
@@ -30,10 +30,14 @@ requirements:
     - r-base
     - r-corpcor
     - r-ggplot2 >=3.5.2
+    - r-cowplot
+    - r-qpdf
   run:
     - r-base
     - r-corpcor
     - r-ggplot2 >=3.5.2
+    - r-cowplot
+    - r-qpdf
 
 test:
   commands:
@@ -66,7 +70,7 @@ extra:
 # Encoding: UTF-8
 # RoxygenNote: 7.3.3
 # Suggests: cli, pdftools, png, testthat (>= 3.0.0)
-# Imports: corpcor, ggplot2 (>= 3.5.2), stats, utils
+# Imports: corpcor, ggplot2 (>= 3.5.2), stats, utils, cowplot, qpdf
 # Config/testthat/edition: 3
 # Collate: convex_function.R icm_function.R
 # NeedsCompilation: no
