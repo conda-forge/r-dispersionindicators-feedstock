@@ -27,13 +27,13 @@ requirements:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
-    - r-base
+    - r-base >=4.1
     - r-corpcor
     - r-ggplot2 >=3.5.2
     - r-cowplot
     - r-qpdf
   run:
-    - r-base
+    - r-base >= 4.1
     - r-corpcor
     - r-ggplot2 >=3.5.2
     - r-cowplot
